@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  --page-bg: #080808;
+  --panel-bg: #11100f;
+  --surface-bg: rgba(17, 16, 15, 0.8);
+  --text: #f5f3ef;
+  --muted: #a8a39a;
+  --accent: #ffb52e;
+  --accent-alt: #d4872b;
+  --accent-light: #ffd666;
+  --border: #2a261f;
+  --border-light: #3a3530;
+  --font-sans: "Segoe UI", "Inter", sans-serif;
+  --font-display: Georgia, serif;
+}
+
+html {
+  background: var(--page-bg);
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--page-bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-sans);
+  letter-spacing: -0.06em;
+}
+
+.display-serif {
+  font-family: var(--font-display);
+  letter-spacing: 0.02em;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
