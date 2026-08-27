@@ -5,6 +5,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 import { FiScissors, FiZap, FiFilm, FiDownload } from "react-icons/fi";
+import CinematicBackground from "./background/CinematicBackground";
 
 export default function About() {
   const aboutRef = useRef(null);
@@ -100,6 +101,10 @@ export default function About() {
     >
       {/* --- BG EFFECTS --- */}
 
+      <CinematicBackground />
+
+      <div className="pointer-events-none absolute left-1/2 top-1/2 z-0 h-[700px] w-[700px] -translate-x-1/2 -translate-y-1/2 animate-[contactGlow_5s_ease-in-out_infinite] rounded-full bg-[#FFB238]/[0.06] blur-[120px]" />
+
       <div
         className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none"
         style={{
@@ -140,7 +145,7 @@ export default function About() {
       <div className="relative z-[50] w-full lg:w-[80%] flex flex-col md:flex-row items-center justify-end">
         {/* Visual Gap for the face mask area */}
 
-        <div className="hidden lg:block w-[35%] h-full"></div>
+        <div className="hidden lg:block w-[55%] h-full"></div>
 
         {/* Main Content Pane */}
 
@@ -149,12 +154,26 @@ export default function About() {
 
           <div className="about-reveal space-y-2">
             <p className="text-[#FFB52E] font-mono text-[10px] uppercase tracking-[0.5em]">
-              SYSTEM INFO
+              ABOUT ME
             </p>
 
-            <h2 className="text-4xl md:text-5xl lg:text-7xl font-black text-white tracking-tighter uppercase">
-              About Me
-              <span className="text-[#FFB52E]">.</span>
+            <h2
+              className="
+    text-4xl
+    font-extrabold
+    uppercase
+    leading-[0.9]
+    tracking-[-0.055em]
+    text-white
+    md:text-6xl
+    lg:text-7xl
+  "
+            >
+              <span className="block whitespace-nowrap">THE EDITOR BEHIND</span>
+
+              <span className="block whitespace-nowrap text-[#FFB52E]">
+                THE TIMELINE.
+              </span>
             </h2>
           </div>
 

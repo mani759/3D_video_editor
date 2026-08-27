@@ -3,23 +3,32 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero.jsx";
 import FrameScrollAnimation from "./components/FrameScrollAnimation";
 import About from "./components/About";
-import Projects from "./components/Projects";
+import Services from "./components/Services/Services.jsx";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Loader from "./components/Loader";
+import Work from "./components/work/Work";
 
 function App() {
   return (
     <div className="app min-h-screen bg-[#080808] text-[#F5F3EF]">
       <Navbar />
-      <main className="space-y-24 bg-[#080808] px-4 py-8 md:px-8">
+
+      <main className="w-full bg-[#080808]">
         <Hero />
+
         <FrameScrollAnimation />
+
         <About />
-        <Projects />
+
+        <Work />
+        <Services />
+
         <Contact />
       </main>
+
       <Footer />
+
       <Loader />
     </div>
   );

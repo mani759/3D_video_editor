@@ -33,6 +33,11 @@ export default {
         22: "5.5rem",
         26: "6.5rem",
       },
+      fontFamily: {
+        sans: ["Inter", "Segoe UI", "sans-serif"],
+        display: ["Sora", "Inter", "sans-serif"],
+        mono: ["IBM Plex Mono", "Consolas", "monospace"],
+      },
     },
   },
   plugins: [],

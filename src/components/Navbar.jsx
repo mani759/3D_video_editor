@@ -20,11 +20,11 @@ export default function Navbar() {
           </div>
 
           <div className="flex flex-col leading-none">
-            <span className="font-mono text-[11px] font-bold tracking-[0.28em] text-[#F5F3EF] md:text-[12px]">
+            <span className="font-mono text-[13px] font-bold tracking-[0.28em] text-[#F5F3EF] md:text-[14px]">
               MANIKANTA
             </span>
 
-            <span className="mt-1 font-mono text-[7px] tracking-[0.25em] text-[#FFB52E]/70">
+            <span className="mt-1 font-mono text-[8px] tracking-[0.25em] text-[#FFB52E]/80">
               CREATIVE SYSTEM
             </span>
           </div>
@@ -36,10 +36,12 @@ export default function Navbar() {
             <a
               key={item.label}
               href={item.href}
-              className="group relative flex items-center gap-2 py-2 font-mono text-[10px] tracking-[0.22em] text-[#A8A39A] transition-colors duration-300 hover:text-[#F5F3EF]"
+              className="group relative flex items-center gap-2 py-2 font-mono text-[11px] font-medium tracking-[0.22em] text-[#C4BEB4] transition-colors duration-300 hover:text-[#F5F3EF] md:text-[12px]"
             >
               {/* index */}
-              <span className="text-[8px] text-[#FFB52E]/60">0{index + 1}</span>
+              <span className="text-[9px] font-semibold text-[#FFB52E]/80">
+                0{index + 1}
+              </span>
 
               {item.label}
 
@@ -50,8 +52,8 @@ export default function Navbar() {
         </nav>
 
         {/* STATUS */}
-        <div className="hidden items-center gap-2 font-mono text-[8px] tracking-[0.2em] md:flex">
-          <span className="text-[#6F6A61]">SYSTEM</span>
+        <div className="hidden items-center gap-2 font-mono text-[9px] font-medium tracking-[0.2em] md:flex">
+          <span className="text-[#858078]">SYSTEM</span>
 
           <span className="h-[5px] w-[5px] animate-pulse rounded-full bg-[#FFB52E]" />
 

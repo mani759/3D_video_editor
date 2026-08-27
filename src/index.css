@@ -1,6 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&family=Sora:wght@400;500;600;700;800&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@keyframes contactGlow {
+  0%,
+  100% {
+    opacity: 0.5;
+    transform: translate(-50%, -50%) scale(0.9);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+}
 
 :root {
   color-scheme: dark;
@@ -14,8 +29,9 @@
   --accent-light: #ffd666;
   --border: #2a261f;
   --border-light: #3a3530;
-  --font-sans: "Segoe UI", "Inter", sans-serif;
-  --font-display: Georgia, serif;
+  --font-sans: "Inter", "Segoe UI", sans-serif;
+  --font-display: "Sora", "Inter", sans-serif;
+  --font-mono: "IBM Plex Mono", Consolas, monospace;
 }
 
 html {
@@ -28,8 +44,8 @@ body {
   background: var(--page-bg);
   color: var(--text);
   font-family: var(--font-sans);
-  font-weight: 500;
-  letter-spacing: -0.02em;
+  font-weight: 400;
+  letter-spacing: normal;
   overflow-x: hidden;
 }
 
@@ -39,22 +55,30 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--font-sans);
-  letter-spacing: -0.06em;
-}
-
-.display-serif {
   font-family: var(--font-display);
-  letter-spacing: 0.02em;
-}
-
-* {
-  box-sizing: border-box;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1;
 }
 
 button,
 input,
 textarea,
 select {
-  font: inherit;
+  font-family: var(--font-sans);
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+  font-weight: 500;
+}
+
+.display-serif,
+.font-display {
+  font-family: var(--font-display);
+  letter-spacing: -0.03em;
+}
+
+* {
+  box-sizing: border-box;
 }

@@ -470,20 +470,20 @@ export default function Hero() {
                   className="mb-4"
                 >
                   <h1
-                    className="text-4xl md:text-6xl lg:text-7xl font-sans font-bold text-[#F5F3EF] tracking-[0.1em] uppercase leading-none"
+                    className="font-display text-4xl md:text-6xl lg:text-7xl font-bold text-[#F5F3EF] tracking-[0.1em] uppercase leading-none"
                     style={{ textShadow: "0 0 20px rgba(255,181,46,0.15)" }}
                   >
-                    <span className="title-not block text-[#F5F3EF] text-[clamp(4rem,6vw,6rem)] font-black leading-[0.9] tracking-[-0.04em]">
+                    <span className="title-not block text-[#F5F3EF] text-[clamp(4rem,6vw,6rem)] font-extrabold leading-[0.9] tracking-[-0.04em]">
                       NOT
                     </span>
 
                     {/* 2. JUST */}
-                    <span className="title-just block text-[#F5F3EF] text-[clamp(4rem,6vw,6rem)] font-black leading-[0.9] tracking-[-0.04em]">
+                    <span className="title-just block text-[#F5F3EF] text-[clamp(4rem,6vw,6rem)] font-extrabold leading-[0.9] tracking-[-0.04em]">
                       JUST
                     </span>
 
                     {/* 3. A VIDEO EDITOR */}
-                    <span className="title-editor block text-[#FFB52E] text-[clamp(3.5rem,5.5vw,5.5rem)] font-black leading-[0.9] tracking-[-0.04em] whitespace-nowrap">
+                    <span className="title-editor block text-[#FFB52E] text-[clamp(3.5rem,5.5vw,5.5rem)] font-extrabold leading-[0.9] tracking-[-0.04em] whitespace-nowrap">
                       A VIDEO EDITOR
                     </span>
                   </h1>
@@ -497,7 +497,7 @@ export default function Hero() {
                   transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
                   className="relative inline-block"
                 >
-                  <h2 className="text-sm md:text-md lg:text-lg font-mono text-[#A8A39A] tracking-[0.2em] uppercase pb-2">
+                  <h2 className="font-display text-sm md:text-md lg:text-lg text-[#A8A39A] tracking-[0.2em] uppercase pb-2">
                     MANIKANTA
                   </h2>
                   <div className="absolute bottom-0 left-0 w-full h-[1px] bg-[#FFB52E]/60"></div>
