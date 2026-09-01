@@ -253,7 +253,7 @@ const Contact = () => {
   const seqRef = useRef({ frame: 0 });
 
   const currentFrame = (index) =>
-    `/images_contact/ezgif-frame-${(index + 1).toString().padStart(3, "0")}.jpg`;
+    `/img_contact_2/ezgif-frame-${(index + 1).toString().padStart(3, "0")}.jpg`;
 
   // 1. Preload Sequence
   useEffect(() => {
@@ -447,16 +447,13 @@ const Contact = () => {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 30 }}
             transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-            className="relative z-50 w-full max-w-4xl px-6 pointer-events-auto"
+            className="relative z-50 w-full max-w-4xl ml-[60%] mr-[5vw] px-6 pointer-events-auto"
           >
-            <div className="text-center mb-8">
-              <h2 className="text-3xl md:text-5xl lg:text-6xl font-extrabold text-white uppercase tracking-tighter leading-tight max-w-4xl mx-auto mb-4">
-                Let's Build Intelligent Digital Experiences.
+            <div className="text-left mb-8">
+              <h2 className="text-xl md:text-4xl lg:text-5xl font-extrabold text-white uppercase tracking-tighter leading-[0.95] max-w-[600px]  mt-10 mb-5">
+                LET'S MAKE SOMETHING <br />
+                <span className="text-[#FFB52E] ">WORTH WATCHING.</span>
               </h2>
-              <div className="flex items-center justify-center space-x-2 text-[#FFB52E]/70 font-mono text-[9px] tracking-[0.6em] uppercase">
-                <FiShield />
-                <span>Protocol: Neural_Gate</span>
-              </div>
             </div>
 
             <form
