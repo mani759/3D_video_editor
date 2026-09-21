@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Play, X, ArrowUpRight } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import CinematicBackground from "../background/CinematicBackground";
 
 const projects = [
@@ -29,6 +29,30 @@ const projects = [
 
 const Work = () => {
   const [selectedVideo, setSelectedVideo] = useState(null);
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    if (!selectedVideo) {
+      if (videoRef.current) {
+        videoRef.current.pause();
+        videoRef.current.currentTime = 0;
+      }
+      return;
+    }
+
+    if (videoRef.current) {
+      videoRef.current.load();
+      videoRef.current.play().catch(() => {});
+    }
+  }, [selectedVideo]);
+
+  const closeVideo = () => {
+    if (videoRef.current) {
+      videoRef.current.pause();
+      videoRef.current.currentTime = 0;
+    }
+    setSelectedVideo(null);
+  };
 
   return (
     <>
@@ -237,18 +261,6 @@ const Work = () => {
     group-hover:scale-[1.045]
   "
                   />
-                  <video
-                    src={selectedVideo}
-                    controls
-                    autoPlay
-                    playsInline
-                    className="block max-h-[85vh] w-full bg-black"
-                    onError={(e) => {
-                      console.error("VIDEO FAILED TO LOAD:", selectedVideo);
-                      console.error(e.currentTarget.error);
-                    }}
-                  />
-
                   {/* Dark cinematic gradient */}
 
                   <div
@@ -515,7 +527,7 @@ const Work = () => {
 
             <button
               type="button"
-              onClick={() => setSelectedVideo(null)}
+              onClick={closeVideo}
               className="
                 absolute
                 right-3
@@ -544,6 +556,8 @@ const Work = () => {
             </button>
 
             <video
+              key={selectedVideo}
+              ref={videoRef}
               src={selectedVideo}
               controls
               autoPlay
