@@ -282,7 +282,7 @@ export default function Hero() {
         className="
     portfolio-ui
     absolute
-    bottom-6 right-4
+    bottom-4 right-3
     md:bottom-12 md:right-12
     z-[60]
     font-mono
@@ -294,8 +294,8 @@ export default function Hero() {
         <div
           className="
       relative
-      w-[165px] md:w-[205px]
-    px-3.5 py-3
+      w-[145px] sm:w-[165px] md:w-[205px]
+    px-2.5 py-2 sm:px-3.5 sm:py-3
       rounded-2xl
       overflow-hidden
       border border-[#FFB52E]/30
@@ -417,7 +417,7 @@ export default function Hero() {
         </div>
       </div>
       {/* --- SOCIAL LINKS --- */}
-      <div className="portfolio-ui absolute bottom-12 left-8 md:left-12 z-[60] flex flex-col space-y-5">
+      <div className="portfolio-ui absolute bottom-4 left-4 md:bottom-12 md:left-12 z-[60] flex flex-col space-y-5">
         <a
           href="https://github.com"
           target="_blank"
@@ -459,9 +459,9 @@ export default function Hero() {
       {/* --- PORTFOLIO TEXT OVERLAY --- */}
       <AnimatePresence>
         {loaded && (
-          <div className="portfolio-ui absolute inset-0 z-[50] pointer-events-none flex flex-col md:flex-row justify-between items-center md:items-center px-8v pt-32 pb-16 md:pt-0 md:pb-0">
+          <div className="portfolio-ui absolute inset-0 z-[50] pointer-events-none flex flex-col md:flex-row justify-between items-center md:items-center px-4 md:px-8 pt-20 pb-16 md:pt-0 md:pb-0">
             {/* LEFT SIDE: Name and Role */}
-            <div className="w-full md:w-[35%] mt-20 ml-5 flex flex-col items-center md:items-start text-center md:text-left">
+            <div className="w-full md:w-[35%] mt-12 md:mt-20 ml-0 md:ml-5 flex flex-col items-center md:items-start text-center md:text-left">
               {currentFrameIdx >= 145 && (
                 <motion.div
                   initial={{ opacity: 0, y: 30 }}
@@ -473,17 +473,17 @@ export default function Hero() {
                     className="font-display text-4xl md:text-6xl lg:text-7xl font-bold text-[#F5F3EF] tracking-[0.1em] uppercase leading-none"
                     style={{ textShadow: "0 0 20px rgba(255,181,46,0.15)" }}
                   >
-                    <span className="title-not block text-[#F5F3EF] text-[clamp(4rem,6vw,6rem)] font-extrabold leading-[0.9] tracking-[-0.04em]">
+                    <span className="title-not block text-[#F5F3EF] text-[clamp(2.5rem,8vw,4rem)] md:text-[clamp(4rem,6vw,6rem)] font-extrabold leading-[0.9] tracking-[-0.04em]">
                       NOT
                     </span>
 
                     {/* 2. JUST */}
-                    <span className="title-just block text-[#F5F3EF] text-[clamp(4rem,6vw,6rem)] font-extrabold leading-[0.9] tracking-[-0.04em]">
+                    <span className="title-just block text-[#F5F3EF] text-[clamp(2.5rem,8vw,4rem)] md:text-[clamp(4rem,6vw,6rem)] font-extrabold leading-[0.9] tracking-[-0.04em]">
                       JUST
                     </span>
 
                     {/* 3. A VIDEO EDITOR */}
-                    <span className="title-editor block text-[#FFB52E] text-[clamp(3.5rem,5.5vw,5.5rem)] font-extrabold leading-[0.9] tracking-[-0.04em] whitespace-nowrap">
+                    <span className="title-editor block text-[#FFB52E] text-[clamp(2rem,7vw,3.5rem)] md:text-[clamp(3.5rem,5.5vw,5.5rem)] font-extrabold leading-[0.9] tracking-[-0.04em] whitespace-normal md:whitespace-nowrap">
                       A VIDEO EDITOR
                     </span>
                   </h1>
@@ -506,7 +506,7 @@ export default function Hero() {
             </div>
 
             {/* RIGHT SIDE: Description and Button */}
-            <div className="w-full md:w-[30%] flex flex-col items-center md:items-start text-center md:text-left mt-16 md:mt-0 md:pl-8">
+            <div className="w-full md:w-[30%] flex flex-col items-center md:items-start text-center md:text-left mt-8 md:mt-0 md:pl-8">
               {currentFrameIdx >= 224 && (
                 <motion.div
                   initial={{ opacity: 0, y: 30 }}

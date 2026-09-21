@@ -43,14 +43,14 @@ const Services = () => {
   return (
     <section
       id="services"
-      className="relative z-[2] mx-auto w-[90%] max-w-[1400px] py-[100px] md:py-[140px]"
+      className="relative z-[2] mx-auto w-[90%] max-w-[1400px] py-[60px] md:py-[140px]"
     >
       <div className="pointer-events-none absolute left-1/2 top-1/2 h-[700px] w-[700px] -translate-x-1/2 -translate-y-1/2 animate-[contactGlow_5s_ease-in-out_infinite] rounded-full bg-[#FFB238]/[0.06] blur-[120px]" />
 
       {/* HEADING */}
 
       <motion.div
-        className="mb-[45px] max-w-[800px] md:mb-[70px]"
+        className="mb-[35px] max-w-[800px] md:mb-[70px]"
         initial={{
           opacity: 0,
           y: 50,
@@ -71,7 +71,7 @@ const Services = () => {
           WHAT I DO
         </p>
 
-        <h2 className="text-[clamp(3rem,5vw,5.5rem)] font-extrabold leading-[1.05] tracking-[-3px] text-[#F4F1EB]">
+        <h2 className="text-[clamp(2.2rem,8vw,5.5rem)] font-extrabold leading-[1.05] tracking-[-2px] sm:tracking-[-3px] text-[#F4F1EB]">
           Cinematic
           <span className="block text-[#FFB238]">Services.</span>
         </h2>
@@ -87,7 +87,7 @@ const Services = () => {
 
           return (
             <motion.div
-              className="group relative min-h-[380px] cursor-default overflow-hidden rounded-[20px] border border-[#FFB238]/10 bg-[linear-gradient(145deg,rgba(24,24,26,0.85),rgba(12,12,14,0.85))] p-[35px_25px] backdrop-blur-[14px] transition-[border-color,box-shadow] duration-500 hover:border-[#FFB238]/40 hover:shadow-[0_30px_70px_rgba(0,0,0,0.45)] sm:p-[45px]"
+              className="group relative min-h-0 sm:min-h-[380px] cursor-default overflow-hidden rounded-[20px] border border-[#FFB238]/10 bg-[linear-gradient(145deg,rgba(24,24,26,0.85),rgba(12,12,14,0.85))] p-[25px_20px] backdrop-blur-[14px] transition-[border-color,box-shadow] duration-500 hover:border-[#FFB238]/40 hover:shadow-[0_30px_70px_rgba(0,0,0,0.45)] sm:p-[45px]"
               key={service.title}
               initial={{
                 opacity: 0,
@@ -115,7 +115,7 @@ const Services = () => {
 
               {/* NUMBER */}
 
-              <span className="absolute right-[25px] top-[25px] text-[4rem] font-extrabold leading-none text-white/[0.06] sm:right-[35px] sm:top-[30px] sm:text-[5rem]">
+              <span className="absolute right-4 top-4 text-[3rem] font-extrabold leading-none text-white/[0.06] sm:right-[35px] sm:top-[30px] sm:text-[5rem]">
                 {service.number}
               </span>
 

@@ -193,9 +193,9 @@ const FrameScrollAnimation = ({ frameCount = 192 }) => {
 
       <motion.div
         style={{ opacity: cutOpacity }}
-        className="absolute inset-0 z-[60] flex items-center justify-center pointer-events-none"
+        className="absolute inset-0 z-[60] flex items-center justify-center pointer-events-none px-4"
       >
-        <h2 className="text-center font-extrabold uppercase tracking-[-0.04em] leading-none text-[#F5F3EF] text-7xl md:text-9xl">
+        <h2 className="text-center font-extrabold uppercase tracking-[-0.04em] leading-none text-[#F5F3EF] text-6xl sm:text-7xl md:text-9xl">
           CUT
         </h2>
       </motion.div>
@@ -207,9 +207,9 @@ const FrameScrollAnimation = ({ frameCount = 192 }) => {
             [0, 1, 1, 1],
           ),
         }}
-        className="absolute  inset-x-0 top-[70%] -translate-y-1/2 flex flex-col items-center justify-center text-center pointer-events-none z-[60]"
+        className="absolute inset-x-0 top-[70%] -translate-y-1/2 flex flex-col items-center justify-center text-center pointer-events-none z-[60] px-4"
       >
-        <h3 className="mb-2 text-7xl font-extrabold uppercase tracking-tighter text-[#F5F3EF] drop-shadow-2xl md:text-8xl">
+        <h3 className="mb-2 text-5xl font-extrabold uppercase tracking-tighter text-[#F5F3EF] drop-shadow-2xl sm:text-7xl md:text-8xl">
           MOTION
         </h3>
       </motion.div>
@@ -222,9 +222,9 @@ const FrameScrollAnimation = ({ frameCount = 192 }) => {
             [0, 1, 1, 1],
           ),
         }}
-        className="absolute  inset-x-0 top-[60%] -translate-y-1/2 flex flex-col items-center justify-center text-center pointer-events-none z-[60]"
+        className="absolute inset-x-0 top-[60%] -translate-y-1/2 flex flex-col items-center justify-center text-center pointer-events-none z-[60] px-4"
       >
-        <h3 className="mb-2 text-6xl font-extrabold uppercase tracking-tighter text-[#FFB52E] drop-shadow-2xl md:text-8xl">
+        <h3 className="mb-2 text-4xl font-extrabold uppercase tracking-tighter text-[#FFB52E] drop-shadow-2xl sm:text-6xl md:text-8xl">
           STORY
         </h3>
       </motion.div>
@@ -236,9 +236,9 @@ const FrameScrollAnimation = ({ frameCount = 192 }) => {
             [0, 1, 1, 1],
           ),
         }}
-        className="absolute  inset-x-0 top-[90%] -translate-y-1/2 flex flex-col items-center justify-center text-center pointer-events-none z-[60]"
+        className="absolute inset-x-0 top-[90%] -translate-y-1/2 flex flex-col items-center justify-center text-center pointer-events-none z-[60] px-4"
       >
-        <h2 className="font-extrabold uppercase tracking-[-0.04em] leading-[0.9] text-[#F5F3EF] text-5xl md:text-8xl">
+        <h2 className="font-extrabold uppercase tracking-[-0.04em] leading-[0.9] text-[#F5F3EF] text-3xl sm:text-5xl md:text-8xl">
           EVERY FRAME
           <br />
           HAS A <span className="text-[#FFB52E]">PURPOSE.</span>

@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 
 export default function Navbar() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
   const navItems = [
     { label: "ABOUT", href: "#about" },
     { label: "PROJECTS", href: "#projects" },
@@ -62,14 +64,55 @@ export default function Navbar() {
 
         {/* MOBILE MENU BUTTON */}
         <button
-          className="group flex flex-col gap-1.5 md:hidden"
-          aria-label="Open menu"
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          className="group flex flex-col gap-1.5 p-1 md:hidden"
+          aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
         >
-          <span className="h-[1px] w-6 bg-[#F5F3EF] transition group-hover:bg-[#FFB52E]" />
-          <span className="h-[1px] w-4 self-end bg-[#FFB52E]" />
-          <span className="h-[1px] w-6 bg-[#F5F3EF] transition group-hover:bg-[#FFB52E]" />
+          <span
+            className={`h-[1px] w-6 bg-[#F5F3EF] transition-all duration-300 ${
+              isMobileMenuOpen ? "translate-y-2 rotate-45 bg-[#FFB52E]" : ""
+            }`}
+          />
+          <span
+            className={`h-[1px] w-4 self-end bg-[#FFB52E] transition-all duration-300 ${
+              isMobileMenuOpen ? "opacity-0" : ""
+            }`}
+          />
+          <span
+            className={`h-[1px] w-6 bg-[#F5F3EF] transition-all duration-300 ${
+              isMobileMenuOpen ? "-translate-y-2 -rotate-45 bg-[#FFB52E]" : ""
+            }`}
+          />
         </button>
       </div>
+
+      {/* MOBILE MENU OVERLAY */}
+      {isMobileMenuOpen && (
+        <div className="border-b border-[#FFB52E]/20 bg-[#0b0b0b]/95 backdrop-blur-xl md:hidden">
+          <div className="flex flex-col space-y-4 px-6 py-6 font-mono text-xs tracking-[0.2em]">
+            {navItems.map((item, index) => (
+              <a
+                key={item.label}
+                href={item.href}
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="flex items-center gap-3 border-b border-white/5 pb-3 text-[#C4BEB4] transition-colors hover:text-[#FFB52E]"
+              >
+                <span className="text-[10px] text-[#FFB52E]">0{index + 1}</span>
+                {item.label}
+              </a>
+            ))}
+
+            <div className="flex items-center justify-between pt-2 text-[10px] text-[#858078]">
+              <span>SYSTEM STATUS</span>
+              <span className="flex items-center gap-2 text-[#FFB52E]">
+                <span className="h-[6px] w-[6px] animate-pulse rounded-full bg-[#FFB52E]" />
+                ONLINE
+              </span>
+            </div>
+          </div>
+        </div>
+      )}
     </header>
   );
 }
+

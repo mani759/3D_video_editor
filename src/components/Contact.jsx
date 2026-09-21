@@ -414,13 +414,13 @@ const Contact = () => {
             </div>
 
             {/* Brackets */}
-            <div className="absolute top-10 left-10 w-24 h-24 border-t border-l border-[#FFB52E]/20" />
-            <div className="absolute top-10 right-10 w-24 h-24 border-t border-r border-[#FFB52E]/20" />
-            <div className="absolute bottom-10 left-10 w-24 h-24 border-b border-l border-[#FFB52E]/20" />
-            <div className="absolute bottom-10 right-10 w-24 h-24 border-b border-r border-[#FFB52E]/20" />
+            <div className="absolute top-4 left-4 md:top-10 md:left-10 w-12 h-12 md:w-24 md:h-24 border-t border-l border-[#FFB52E]/20" />
+            <div className="absolute top-4 right-4 md:top-10 md:right-10 w-12 h-12 md:w-24 md:h-24 border-t border-r border-[#FFB52E]/20" />
+            <div className="absolute bottom-4 left-4 md:bottom-10 md:left-10 w-12 h-12 md:w-24 md:h-24 border-b border-l border-[#FFB52E]/20" />
+            <div className="absolute bottom-4 right-4 md:bottom-10 md:right-10 w-12 h-12 md:w-24 md:h-24 border-b border-r border-[#FFB52E]/20" />
 
             {/* Static HUD Text */}
-            <div className="absolute top-12 left-12 flex items-center space-x-3">
+            <div className="absolute top-6 left-6 md:top-12 md:left-12 flex items-center space-x-3">
               <FiActivity className="text-[#FFB52E] text-xs animate-pulse" />
               <span className="text-[#FFB52E]/40 text-[9px] tracking-[0.4em] uppercase font-bold">
                 Signal_Stable
@@ -447,10 +447,10 @@ const Contact = () => {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 30 }}
             transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-            className="relative z-50 w-full max-w-4xl ml-[60%] mr-[5vw] px-6 pointer-events-auto"
+            className="relative z-50 w-full max-w-xl lg:max-w-4xl ml-0 lg:ml-[60%] lg:mr-[5vw] mx-auto lg:mx-0 px-4 md:px-6 pointer-events-auto"
           >
-            <div className="text-left mb-8">
-              <h2 className="text-xl md:text-4xl lg:text-5xl font-extrabold text-white uppercase tracking-tighter leading-[0.95] max-w-[600px]  mt-10 mb-5">
+            <div className="text-left mb-4 md:mb-8">
+              <h2 className="text-xl md:text-4xl lg:text-5xl font-extrabold text-white uppercase tracking-tighter leading-[0.95] max-w-[600px] mt-4 md:mt-10 mb-3 md:mb-5">
                 LET'S MAKE SOMETHING <br />
                 <span className="text-[#FFB52E] ">WORTH WATCHING.</span>
               </h2>
@@ -459,10 +459,10 @@ const Contact = () => {
             <form
               ref={formRef}
               onSubmit={sendEmail}
-              className="bg-[#11100F]/85 backdrop-blur-md border border-[#FFB52E]/20 p-10 md:p-14 rounded-none shadow-[0_20px_50px_rgba(0,0,0,0.5)] space-y-10 group"
+              className="bg-[#11100F]/85 backdrop-blur-md border border-[#FFB52E]/20 p-5 sm:p-10 md:p-14 rounded-none shadow-[0_20px_50px_rgba(0,0,0,0.5)] space-y-5 md:space-y-10 group"
             >
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-                <div className="space-y-3">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-10">
+                <div className="space-y-2 md:space-y-3">
                   <label className="text-[9px] font-mono font-bold uppercase tracking-[0.3em] text-[#FFB52E]/70 block ml-1">
                     ENTER_NAME
                   </label>
@@ -471,10 +471,10 @@ const Contact = () => {
                     type="text"
                     placeholder="ENTER_NAME"
                     required
-                    className="w-full bg-white/5 border-b border-white/10 py-5 px-6 text-[#F5F3EF] text-[11px] outline-none focus:border-[#FFB52E] transition-all placeholder:text-[#A8A39A]/40"
+                    className="w-full bg-white/5 border-b border-white/10 py-3 md:py-5 px-4 md:px-6 text-[#F5F3EF] text-[11px] outline-none focus:border-[#FFB52E] transition-all placeholder:text-[#A8A39A]/40"
                   />
                 </div>
-                <div className="space-y-3">
+                <div className="space-y-2 md:space-y-3">
                   <label className="text-[9px] font-mono font-bold uppercase tracking-[0.3em] text-[#FFB52E]/70 block ml-1">
                     ENTER_EMAIL
                   </label>
@@ -483,7 +483,7 @@ const Contact = () => {
                     type="email"
                     placeholder="ENTER_EMAIL"
                     required
-                    className="w-full bg-white/5 border-b border-white/10 py-5 px-6 text-[#F5F3EF] text-[11px] outline-none focus:border-[#FFB52E] transition-all placeholder:text-[#A8A39A]/40"
+                    className="w-full bg-white/5 border-b border-white/10 py-3 md:py-5 px-4 md:px-6 text-[#F5F3EF] text-[11px] outline-none focus:border-[#FFB52E] transition-all placeholder:text-[#A8A39A]/40"
                   />
                   <p className="text-[10px] text-[#A8A39A]/70 ml-1">
                     Your email is only used to reply to your message.
@@ -491,7 +491,7 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div className="space-y-3">
+              <div className="space-y-2 md:space-y-3">
                 <label className="text-[9px] font-mono font-bold uppercase tracking-[0.3em] text-[#FFB52E]/70 block ml-1">
                   Tell me about your project...
                 </label>
@@ -499,7 +499,7 @@ const Contact = () => {
                   name="message"
                   placeholder="INPUT_TRANSMISSION..."
                   required
-                  className="w-full bg-white/5 border-b border-white/10 py-5 px-6 text-[#F5F3EF] text-[11px] outline-none focus:border-[#FFB52E] transition-all min-h-[140px] resize-none placeholder:text-[#A8A39A]/40"
+                  className="w-full bg-white/5 border-b border-white/10 py-3 md:py-5 px-4 md:px-6 text-[#F5F3EF] text-[11px] outline-none focus:border-[#FFB52E] transition-all min-h-[100px] md:min-h-[140px] resize-none placeholder:text-[#A8A39A]/40"
                 />
               </div>
 
@@ -511,7 +511,7 @@ const Contact = () => {
                   }}
                   whileTap={{ scale: 0.95 }}
                   type="submit"
-                  className="group flex items-center space-x-6 bg-[#FFB52E] text-[#080808] font-extrabold text-[11px] uppercase tracking-[0.6em] px-24 py-6 shadow-[0_15px_40px_rgba(255,181,46,0.2)] transition-all"
+                  className="group flex items-center justify-center space-x-4 md:space-x-6 bg-[#FFB52E] text-[#080808] font-extrabold text-[11px] uppercase tracking-[0.4em] md:tracking-[0.6em] w-full md:w-auto px-8 sm:px-16 md:px-24 py-4 md:py-6 shadow-[0_15px_40px_rgba(255,181,46,0.2)] transition-all"
                 >
                   <span>Send Message</span>
 

@@ -101,7 +101,7 @@ const Work = () => {
           {/* ================= HEADING ================= */}
 
           <motion.div
-            className="mb-14 lg:mb-16"
+            className="mb-10 sm:mb-14 lg:mb-16"
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{
@@ -138,13 +138,13 @@ const Work = () => {
             <h2
               className="
                 max-w-[900px]
-                text-[52px]
+                text-3xl
                 font-extrabold
                 uppercase
-                leading-[0.86]
-                tracking-[-0.055em]
+                leading-[0.9]
+                tracking-[-0.04em]
                 text-[#F5F3EF]
-                sm:text-6xl
+                sm:text-5xl
                 md:text-7xl
                 lg:text-[92px]
                 xl:text-[104px]
@@ -157,7 +157,7 @@ const Work = () => {
 
             {/* Accent line */}
 
-            <div className="mt-8 h-[2px] w-20 bg-[#FFB52E]" />
+            <div className="mt-6 sm:mt-8 h-[2px] w-20 bg-[#FFB52E]" />
           </motion.div>
 
           {/* ================= PROJECT GRID ================= */}

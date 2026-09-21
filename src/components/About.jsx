@@ -97,7 +97,7 @@ export default function About() {
     <div
       id="about"
       ref={aboutRef}
-      className="relative w-full min-h-screen bg-[#05030B] overflow-hidden flex items-center justify-center font-sans tracking-wide py-20 px-6 md:px-12"
+      className="relative w-full min-h-screen bg-[#05030B] overflow-hidden flex items-center justify-center font-sans tracking-wide py-12 sm:py-20 px-4 sm:px-6 md:px-12"
     >
       {/* --- BG EFFECTS --- */}
 
@@ -149,7 +149,7 @@ export default function About() {
 
         {/* Main Content Pane */}
 
-        <div className="w-full lg:w-[65%] flex flex-col space-y-10 pointer-events-auto bg-black/40 backdrop-blur-sm p-8 md:p-12 border border-white/5 rounded-2xl">
+        <div className="w-full lg:w-[65%] flex flex-col space-y-8 sm:space-y-10 pointer-events-auto bg-black/40 backdrop-blur-sm p-5 sm:p-8 md:p-12 border border-white/5 rounded-2xl">
           {/* Header */}
 
           <div className="about-reveal space-y-2">
@@ -159,19 +159,20 @@ export default function About() {
 
             <h2
               className="
-    text-4xl
+    text-3xl
     font-extrabold
     uppercase
-    leading-[0.9]
-    tracking-[-0.055em]
+    leading-[0.95]
+    tracking-[-0.04em]
     text-white
+    sm:text-4xl
     md:text-6xl
     lg:text-7xl
   "
             >
-              <span className="block whitespace-nowrap">THE EDITOR BEHIND</span>
+              <span className="block whitespace-normal sm:whitespace-nowrap">THE EDITOR BEHIND</span>
 
-              <span className="block whitespace-nowrap text-[#FFB52E]">
+              <span className="block whitespace-normal sm:whitespace-nowrap text-[#FFB52E]">
                 THE TIMELINE.
               </span>
             </h2>
